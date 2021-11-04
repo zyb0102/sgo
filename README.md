@@ -1,4 +1,6 @@
-# SGo
+# SGo 
+go >= 1.16
+
 一个基于gin框架的api服务端
 viper 配置解析
 zap 日志库
