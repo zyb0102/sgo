@@ -15,3 +15,5 @@
 # vendor/
 # 忽略IDE
 .idea
+# 忽略日志文件
+log

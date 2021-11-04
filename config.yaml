@@ -1,0 +1,20 @@
+# 系统应用配置
+app:
+  name: "gin-api"
+  debug: true
+  host: "127.0.0.1"
+  port: "9001"
+# 日志配置
+log:
+  directory: "log" # 日志文件
+  level: "debug" # 写入日志级别
+# mysql配置
+mysql:
+  host: "127.0.0.1"
+  port: "3306"
+  database: "test"
+  user-name: "root"
+  password: "123456"
+  charset: "utf8mb4"
+  parse-time: "True"
+  loc: "Local"
