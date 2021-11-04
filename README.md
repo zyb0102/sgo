@@ -11,14 +11,17 @@ gin http web 框架
 `
 git clone https://github.com/285038160/SGo.git
 `
+
 第二步 进入文件夹
 `
 cd SGO
 `
+
 第三步 安装依赖
 `
 go mod tidy
 `
+
 第四步 运行项目
 `
 go run gin-api
