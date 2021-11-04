@@ -9,7 +9,7 @@ type ExampleApi struct {
 	
 }
 
-func (a *ExampleApi) hello(ctx *gin.Context)  {
-	response.Success("你好", map[string]string{"ps":"初次见面"},ctx)
+func (a *ExampleApi) Hello(ctx *gin.Context)  {
+	response.Success("你好", "世界",ctx)
 }
 

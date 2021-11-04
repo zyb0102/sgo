@@ -18,8 +18,10 @@ func Run() {
 	// 路由注册start
 	router.Register(r)
 	// 路由注册结束
+	appConfigParams := global.Config.App
 	// 运行服务
-	err := r.Run("192.168.10.64:9001")
+	address := fmt.Sprintf("%s:%s",appConfigParams.Host,appConfigParams.Port)
+	err := r.Run(address)
 	if err != nil {
 		fmt.Println("服务启动失败")
 		return
