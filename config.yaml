@@ -18,3 +18,6 @@ mysql:
   charset: "utf8mb4"
   parse-time: "True"
   loc: "Local"
+cors:
+  access-control-allow-origin: ["http://192.168.10.70:8080"]
+  access-control-allow-headers: ["Content-Type","AccessToken","X-CSRF-Token", "Authorization", "Token", "Mode"]
