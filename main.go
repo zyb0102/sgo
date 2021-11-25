@@ -24,13 +24,15 @@ func main() {
 		}(db)
 	}
 	// 4.初始化Redis服务
-	redis, err := initialize.InitRedis()
-	if err != nil {
-		global.Logger.Error(err.Error())
-		return
-	} else {
-		global.Redis = redis
-		defer global.Redis.Close()
+	if global.Config.App.OpenRedis {
+		redis, err := initialize.InitRedis()
+		if err != nil {
+			global.Logger.Error(err.Error())
+			return
+		} else {
+			global.Redis = redis
+			defer global.Redis.Close()
+		}
 	}
 	// 5.定时器
 	// 6.运行服务
