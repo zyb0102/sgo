@@ -1,7 +1,7 @@
 package v1
 
 import (
-	v1 "gin-api/api/v1"
+	"gin-api/application/v1/controller"
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,9 +10,9 @@ type ExampleRouterGroup struct {
 }
 
 func (g *ExampleRouterGroup) InitRouter(Router *gin.RouterGroup)  {
-	var exampleApi v1.ExampleApi
-	routerGroup := Router.Group("example")
+	var api controller.ExampleApi
+	router := Router.Group("example")
 	{
-		routerGroup.GET("hello",exampleApi.Hello)
+		router.GET("hello",api.Hello)
 	}
 }

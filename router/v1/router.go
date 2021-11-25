@@ -8,9 +8,9 @@ type RouterGroup struct {
 
 func (g *RouterGroup) InitRouter(Router *gin.RouterGroup) {
 	// 路由设置为v1
-	v1Router := Router.Group("v1")
+	router := Router.Group("v1")
 	{
 		// 初始化Example路由
-		g.ExampleRouterGroup.InitRouter(v1Router)
+		g.ExampleRouterGroup.InitRouter(router)
 	}
 }
