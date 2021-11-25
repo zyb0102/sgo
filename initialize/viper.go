@@ -2,6 +2,7 @@ package initialize
 
 import (
 	"fmt"
+	"gin-api/config"
 	"gin-api/global"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
@@ -26,12 +27,11 @@ func InitViper() *viper.Viper {
 		// 配置文件发生变更之后会调用的回调函数
 		global.Logger.Info("配置文件发生更新,重新加载配置文件")
 		// 重新解析配置文件
+		global.Config = config.Config{}
 		err = v.Unmarshal(&global.Config)
 		if err != nil {
 			panic(fmt.Errorf("配置文件参数重新解析失败: %s \n", err))
 		}
 	})
-
-
 	return v
 }

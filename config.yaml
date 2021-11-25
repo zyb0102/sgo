@@ -4,7 +4,7 @@ app:
   debug: true
   host: "0.0.0.0"
   port: "9005"
-  open-redis : false
+  open-redis: false
 # 日志配置
 log:
   directory: "log" # 日志文件
