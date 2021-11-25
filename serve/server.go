@@ -3,7 +3,7 @@ package serve
 import (
 	"fmt"
 	"gin-api/global"
-	"gin-api/minddleware"
+	"gin-api/middleware"
 	"gin-api/router"
 	gzap "github.com/gin-contrib/zap"
 	"github.com/gin-gonic/gin"
@@ -16,7 +16,7 @@ func Run() {
 	r.Use(gzap.Ginzap(global.Logger, time.RFC3339, true))
 	r.Use(gzap.RecoveryWithZap(global.Logger, true))
 	// 使用跨域中间件
-	r.Use(minddleware.Cors())
+	r.Use(middleware.Cors())
 
 	// 路由注册start
 	router.Register(r)

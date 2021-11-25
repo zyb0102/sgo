@@ -3,7 +3,7 @@ app:
   name: "gin-api"
   debug: true
   host: "0.0.0.0"
-  port: "9001"
+  port: "9005"
 # 日志配置
 log:
   directory: "log" # 日志文件
@@ -18,6 +18,18 @@ mysql:
   charset: "utf8mb4"
   parse-time: "True"
   loc: "Local"
+# 数据库配置
+redis:
+  database: 0
+  host: "192.168.20.222"
+  port: "6379"
+  password: "6Ti26j7yxHM2LILR"
 cors:
-  access-control-allow-origin: ["http://192.168.10.70:8080"]
-  access-control-allow-headers: ["Content-Type","AccessToken","X-CSRF-Token", "Authorization", "Token", "Mode"]
+  # 开启域名(ip)限制
+  open-limit-origin: false
+  # 白名单(域名或者ip)
+  white-origins: [ "http://192.168.20.222:3336","http://192.168.10.70:8080" ]
+  # 黑名单(域名或者ip)
+  black-origins: [ ]
+  # 允许通过的header
+  allow-headers: [ "Content-Type","AccessToken","X-CSRF-Token", "Authorization", "Token", "Mode" ]
