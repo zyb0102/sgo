@@ -1,12 +1,12 @@
 package initialize
 
 import (
-	"gin-api/global"
-	"gin-api/utils"
 	"github.com/lestrrat-go/file-rotatelogs"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"os"
+	"sgo/global"
+	"sgo/utils"
 	"time"
 )
 

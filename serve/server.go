@@ -2,11 +2,11 @@ package serve
 
 import (
 	"fmt"
-	"gin-api/global"
-	"gin-api/middleware"
-	"gin-api/router"
 	gzap "github.com/gin-contrib/zap"
 	"github.com/gin-gonic/gin"
+	"sgo/global"
+	"sgo/middleware"
+	"sgo/router"
 	"time"
 )
 
@@ -23,7 +23,7 @@ func Run() {
 	// 路由注册结束
 	appConfigParams := global.Config.App
 	// 运行服务
-	address := fmt.Sprintf("%s:%s",appConfigParams.Host,appConfigParams.Port)
+	address := fmt.Sprintf("%s:%s", appConfigParams.Host, appConfigParams.Port)
 	err := r.Run(address)
 	if err != nil {
 		fmt.Println("服务启动失败")

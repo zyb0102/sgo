@@ -3,12 +3,19 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"gin-api/global"
-	"gin-api/initialize"
-	"gin-api/serve"
+	"sgo/global"
+	"sgo/initialize"
+	"sgo/pkg/logs"
+	"sgo/serve"
 )
 
 func main() {
+	logs.Info("11111")
+	logs.Warn("222222222222")
+	logs.Error("11111")
+}
+
+func main2() {
 	// 1.使用viper包加载配置
 	global.Viper = initialize.InitViper()
 	// 2.初始化日志库使用zap日志库

@@ -2,10 +2,10 @@ package middleware
 
 import (
 	"fmt"
-	"gin-api/global"
-	"gin-api/utils"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"sgo/global"
+	"sgo/utils"
 	"strings"
 )
 

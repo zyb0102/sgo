@@ -2,10 +2,10 @@ package initialize
 
 import (
 	"fmt"
-	"gin-api/config"
-	"gin-api/global"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
+	"sgo/config"
+	"sgo/global"
 )
 
 func InitViper() *viper.Viper {

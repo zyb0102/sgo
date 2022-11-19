@@ -1,9 +1,9 @@
 package router
 
 import (
-	v1 "gin-api/router/v1"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	v1 "sgo/router/v1"
 )
 
 type Router struct {
@@ -16,7 +16,7 @@ func Register(r *gin.Engine) {
 	{
 		// 测试路由
 		r.GET("/", func(ctx *gin.Context) {
-			ctx.JSON(http.StatusOK,"hello,world")
+			ctx.JSON(http.StatusOK, "hello,world")
 		})
 		// 注册v1路由
 		routerGroup.v1.InitRouter(router)

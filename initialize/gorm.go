@@ -2,12 +2,12 @@ package initialize
 
 import (
 	"fmt"
-	"gin-api/global"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 	"log"
 	"os"
+	"sgo/global"
 	"time"
 )
 
@@ -33,7 +33,7 @@ func InitGorm() *gorm.DB {
 		DontSupportRenameColumn:   true,  // 用 `change` 重命名列，MySQL 8 之前的数据库和 MariaDB 不支持重命名列
 		SkipInitializeWithVersion: false, // 根据版本自动配置
 	}
-	db, _ := gorm.Open(mysql.New(mysqlConfig),gormConfig())
+	db, _ := gorm.Open(mysql.New(mysqlConfig), gormConfig())
 	return db
 }
 
@@ -43,9 +43,9 @@ func gormConfig() *gorm.Config {
 	newLogger := logger.New(
 		log.New(os.Stdout, "\r\n", log.LstdFlags), // io writer
 		logger.Config{
-			SlowThreshold: time.Millisecond * 100,   // 慢 SQL 阈值
-			LogLevel:      logger.Info, // Log level
-			Colorful:      true,         // 禁用彩色打印
+			SlowThreshold: time.Millisecond * 100, // 慢 SQL 阈值
+			LogLevel:      logger.Info,            // Log level
+			Colorful:      true,                   // 禁用彩色打印
 		},
 	)
 	config.Logger = newLogger

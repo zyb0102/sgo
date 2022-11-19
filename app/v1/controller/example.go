@@ -6,9 +6,8 @@ import (
 )
 
 type ExampleApi struct {
-
 }
 
 func (a *ExampleApi) Hello(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK,"11111111")
+	ctx.JSON(http.StatusOK, "11111111")
 }
