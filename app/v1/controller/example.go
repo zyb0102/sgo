@@ -11,3 +11,4 @@ type ExampleApi struct {
 func (a *ExampleApi) Hello(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, "11111111")
 }
+// 182 3730 1808
